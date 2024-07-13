@@ -1,0 +1,89 @@
+site_name: 坡县捕兽笼
+site_url: https://suibianp.github.io/sg-guide-zh-uwu/
+repo_url: https://github.com/SuibianP/sg-guide-zh-uwu
+repo_name: SuibianP/sg-guide-zh-uwu
+edit_uri: edit/main/docs/ # TODO 应该自动识别docs_dir和当前branch
+docs_dir: 文档
+copyright: 版权所有 &copy; 2024 坡县捕兽笼 在<a href="关于/许可协议/" target="_blank" rel="license noopener noreferrer">署名-非商业性使用-相同方式共享 4.0 国际<img src="http://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg" alt="CC BY-NC-SA" style="display:display:inline-block;height:1em;width:auto;vertical-align:text-bottom;"/></a>协议下发布。
+theme:
+  name: material
+  language: zh
+  custom_dir: 覆写
+  font: false
+  icon:
+    logo: simple/furrynetwork
+    repo: fontawesome/solid/socks
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.tooltips
+    - header.autohide
+
+plugins:
+    - search:
+        lang:
+          - zh
+          - en
+        jieba_dict: dict.txt
+    - awesome-pages
+    - social
+    # assets_exclude still only in sponsors
+    # - privacy:
+    #     assets_exclude:
+    #       - giscus.app/*
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - abbr
+  - attr_list
+  - smarty
+  - toc:
+      permalink: 🐾
+      permalink_title: 直达链接
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {}
